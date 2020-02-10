@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Langsa News</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"-->
+</head>
+<body>
+    
+    <div class="jumbotron">
+        <center><h1>Langsa News Aggregator @beta</h1>
+           <a href="/" class="btn btn-danger">Refresh News</a>
+        </form>
+    </center>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                
+                    <h3 class="text-centre"> News from <a href="https://www.langsakota.go.id/">langsakota.go.id</a></h3>
+                    <hr>
+                    <br>
+                
+                    {% for a,b,c,d,e in langsa %}
+                    <a href="{{a}}">
+                    <img width="250" height="180" src="{{c}}">
+                    
+                    <h5>{{b}} </h5>
+                    </a>
+                    {{e}} -
+                    {{d}}
+                    <br>
+                    <hr>
+                    
+                    {% endfor %}
+                        
+                    
+                    <br>
+
+
+            </div>
+            <div class="col-6">
+                
+                <h3 class="text-centre"> News from <a href="https://aceh.tribunnews.com/nanggroe/langsa">Serambinews</a></h3>
+                <hr>
+                <br>
+            
+                {% for a,b,c,d,e in serambi %}
+                <a href="{{a}}">
+                <img width="250" height="180" src="{{c}}">
+                
+                <h5>{{b}} </h5>
+                </a>
+                {{e}} -
+                {{d}}
+                <br>
+                <hr>
+                
+                {% endfor %}
+                    
+                
+                <br>
+
+
+        </div>
+            
+            <div class="col-6">
+                <h3 class="text-centre"> News from <a href="https://aceh.antaranews.com/daerah/kota-langsa/1">antaranews.com</a></h3>
+                <hr>
+                <br>
+                
+                {% for a,b,c,d in antara %}
+                <a href="{{a}}">
+                <img width="250" height="180" src="{{c}}">
+                
+                <h5>{{b}} </h5>
+                </a>
+                {{d}}
+                <br>
+                <hr>
+                
+                {% endfor %}
+                    
+                    
+                    <br>
+            </div>
+            <div class="col-6">
+                <h3 class="text-centre"> News from <a href="https://kompas.com/">kompas.com</a></h3>
+                <hr>
+                <br>
+                
+                {% for a,b,c,d in kompas %}
+                <a href="{{a}}">
+                <img width="250" height="180" src="{{c}}">
+                
+                <h5>{{b}} </h5>
+                </a>
+                {{d}}
+                <br>
+                <hr>
+                
+                {% endfor %}
+                    
+                    
+                    <br>
+            </div>
+        
+        </div>
+ 
+ 
+</div>
+    <script
+src="http://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
